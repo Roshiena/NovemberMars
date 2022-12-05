@@ -1,4 +1,6 @@
-﻿using NovemberQA.Drivers;
+﻿using BoDi;
+using NovemberQA.Utilities;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +13,7 @@ namespace NovemberQA.Hook
     [Binding]
     public sealed class Driver1 : Driver
     {
-        
+
 
         [BeforeScenario]
 
@@ -23,13 +25,16 @@ namespace NovemberQA.Hook
         }
 
 
-        [AfterScenario]
-        public void TearDown()
-        {
-
-            Close();
 
 
-        }
+            [AfterScenario]
+            public void TearDown()
+            {
+
+                Close();
+
+
+            }
+        
     }
 }

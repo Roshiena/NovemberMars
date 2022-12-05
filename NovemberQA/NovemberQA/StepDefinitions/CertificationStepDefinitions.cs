@@ -1,5 +1,4 @@
-﻿using NovemberQA.Drivers;
-using NovemberQA.Pages;
+﻿using NovemberQA.Pages;
 using NovemberQA.Utilities;
 using OpenQA.Selenium.Chrome;
 using System;
@@ -16,16 +15,13 @@ namespace NovemberQA.StepDefinitions
     public class CertificationStepDefinitions : Driver
     {
         LoginPage loginPageObj = new LoginPage();
-        CertificationPage certificationPageObj = new CertificationPage();   
+        CertificationPage certificationPageObj = new CertificationPage();
 
         [Given(@"I logged to portal successfully")]
         public void GivenILoggedToPortalSuccessfully()
         {
-            //open browser
-
-
+        
             loginPageObj.LoginSteps(driver);
-
         }
 
         [When(@"I add '([^']*)', '([^']*)' and '([^']*)' to profile")]

@@ -24,8 +24,8 @@ Scenario Outline: Add Skills in the Profile
 	Then The '<Skills>' and '<Level>' should be added to the profile successfully
 
 Examples:
-| Skills    |  Level         |
-| Cooking   |  Expert        |
+| Skills   | Level    |
+| Cooking  | Expert   |
 
 
 @certifications

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static NovemberQA.Utilities.WaitHelpers;
-using NovemberQA.Drivers;
+using NovemberQA.Utilities;
 
 namespace NovemberQA.Pages
 {

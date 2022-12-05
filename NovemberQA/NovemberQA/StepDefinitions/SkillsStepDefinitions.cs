@@ -1,5 +1,4 @@
-﻿using NovemberQA.Drivers;
-using NovemberQA.Pages;
+﻿using NovemberQA.Pages;
 using NovemberQA.Utilities;
 using OpenQA.Selenium.Chrome;
 using System;
@@ -22,9 +21,7 @@ namespace NovemberQA.StepDefinitions
         [Given(@"I logged in portal successfully")]
         public void GivenILoggedInPortalSuccessfully()
         {
-            //open brower
-
-
+            
             loginPageObj.LoginSteps(driver);
 
         }

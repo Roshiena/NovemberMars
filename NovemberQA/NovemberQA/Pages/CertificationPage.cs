@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace NovemberQA.Pages
 {
-    public class CertificationPage : Driver
+    public class CertificationPage : CommonDriver
     {
         public void AddCertification(IWebDriver driver, string certificate, string certified, string year)
         {

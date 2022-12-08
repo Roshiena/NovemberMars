@@ -12,7 +12,7 @@ namespace NovemberQA.StepDefinitions
 {
 
     [Binding]
-    public class CertificationStepDefinitions : Driver
+    public class CertificationStepDefinitions : CommonDriver
     {
         LoginPage loginPageObj = new LoginPage();
         CertificationPage certificationPageObj = new CertificationPage();

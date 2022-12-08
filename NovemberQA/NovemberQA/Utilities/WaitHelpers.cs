@@ -10,8 +10,7 @@ namespace NovemberQA.Utilities
 {
     public class WaitHelpers
     {
-        public class Wait
-        {
+        
 
             public static void WaitToBeClickable(IWebDriver driver, string locator, string locatorValue, int seconds)
             {
@@ -70,7 +69,7 @@ namespace NovemberQA.Utilities
 
 
 
-        }
+        
 
     }
 

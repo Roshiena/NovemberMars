@@ -11,7 +11,7 @@ using static NovemberQA.Utilities.WaitHelpers;
 
 namespace NovemberQA.Pages
 {
-    public class LoginPage : Driver
+    public class LoginPage : CommonDriver
     {
         public void LoginSteps(IWebDriver driver)
         {
@@ -37,7 +37,7 @@ namespace NovemberQA.Pages
 
                 IWebElement loginButton = driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[4]/button"));
                 loginButton.Click();
-                Wait.WaitToBeVisible(driver, "XPath", "//a[contains(text(),'Mars Logo')]", 20);
+                WaitToBeVisible(driver, "XPath", "//a[contains(text(),'Mars Logo')]", 20);
 
             }
             catch (Exception ex)

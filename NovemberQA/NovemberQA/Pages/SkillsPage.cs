@@ -7,11 +7,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static NovemberQA.Utilities.WaitHelpers;
+
 
 namespace NovemberQA.Pages
 {
-    public class SkillsPage : Driver
+    public class SkillsPage : CommonDriver
     {
         public void AddSkills(IWebDriver driver, string skills, string level)
         {
@@ -30,14 +30,25 @@ namespace NovemberQA.Pages
             IWebElement skillsAddbutton = driver.FindElement(By.XPath("//input[@value='Add']"));
             skillsAddbutton.Click();
             
+            
 
         }
 
         public void NewSkills(IWebDriver driver, string skills, string level)
         {
+           IWebElement profileButton = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[1]/div/a[2]"));
+            profileButton.Click();
+           //WaitHelpers.WaitToBeVisible(driver, "XPath", "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody[last()]/tr/td[1]", 7);
+
+            IWebElement skillsButton = driver.FindElement(By.XPath("//a[contains(text(),'Skills')]"));
+            skillsButton.Click();
+            Waits();
+            //WaitHelpers.WaitToBeVisible(driver, "XPath", "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody[last()]/tr/td[1]", 7);
+
 
             IWebElement newSkill = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody[last()]/tr/td[1]"));
             IWebElement skillLevel = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody[last()]/tr/td[2]"));
+            
 
             Assert.That(newSkill.Text == skills, "Actual skills and expected skills do not match");
             Assert.That(skillLevel.Text == level, "Acutal level and expected level do not match");

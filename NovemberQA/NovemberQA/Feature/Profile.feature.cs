@@ -120,6 +120,8 @@ this.ScenarioInitialize(scenarioInfo);
         [NUnit.Framework.DescriptionAttribute("Add Skills in the Profile")]
         [NUnit.Framework.CategoryAttribute("skills")]
         [NUnit.Framework.TestCaseAttribute("Cooking", "Expert", null)]
+        [NUnit.Framework.TestCaseAttribute("Teaching", "Beginner", null)]
+        [NUnit.Framework.TestCaseAttribute("PetCare", "Intermediate", null)]
         public void AddSkillsInTheProfile(string skills, string level, string[] exampleTags)
         {
             string[] @__tags = new string[] {
@@ -174,7 +176,7 @@ this.ScenarioInitialize(scenarioInfo);
             argumentsOfScenario.Add("From", from);
             argumentsOfScenario.Add("Year", year);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Certifications in the Profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 32
+#line 35
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -184,13 +186,13 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 33
+#line 36
     testRunner.Given("I logged to portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 34
+#line 37
  testRunner.When(string.Format("I add \'{0}\', \'{1}\' and \'{2}\' to profile", certification, from, year), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 35
+#line 38
  testRunner.Then(string.Format("The \'{0}\', \'{1}\' and \'{2}\' should be added to the profile successfully", certification, from, year), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

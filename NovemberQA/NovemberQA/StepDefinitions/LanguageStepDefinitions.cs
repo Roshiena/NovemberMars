@@ -11,7 +11,7 @@ using TechTalk.SpecFlow;
 namespace NovemberQA.StepDefinitions
 {
     [Binding]
-    public class LanguageStepDefinitions : Driver
+    public class LanguageStepDefinitions : CommonDriver
     {
         LoginPage loginPageObj = new LoginPage();
         LanguagePage languagePageObj = new LanguagePage();
@@ -19,7 +19,7 @@ namespace NovemberQA.StepDefinitions
         [Given(@"I logged into portal successfully")]
         public void GivenILoggedIntoPortalSuccessfully()
         {
-                      
+            
             loginPageObj.LoginSteps(driver);
         }
 
@@ -35,6 +35,7 @@ namespace NovemberQA.StepDefinitions
         {
             
             languagePageObj.NewLang(driver, languages, level);
+            
         }
     }
 }

@@ -1,17 +1,15 @@
-﻿using BoDi;
-using NovemberQA.Utilities;
-using OpenQA.Selenium.Chrome;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TechTalk.SpecFlow;
+using NovemberQA.Utilities;
 
 namespace NovemberQA.Hook
 {
     [Binding]
-    public sealed class Driver1 : Driver
+    public sealed class Driver1 : CommonDriver
     {
 
 
@@ -19,7 +17,7 @@ namespace NovemberQA.Hook
 
         public void Setup()
         {
-            //launch the browser
+            
             Initialize();
 
         }
@@ -27,14 +25,14 @@ namespace NovemberQA.Hook
 
 
 
-            [AfterScenario]
-            public void TearDown()
-            {
+        [AfterScenario]
+        public void TearDown()
+        {
 
-                Close();
+            Close();
 
 
-            }
-        
+        }
+
     }
 }

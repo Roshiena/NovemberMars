@@ -14,10 +14,13 @@ namespace NovemberQA.Utilities
     {
         public static IWebDriver driver;
 
+
         public static void Initialize()
         {
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
+            LoginPage loginPageObj = new LoginPage();
+            loginPageObj.LoginSteps(driver);
 
 
         }
@@ -25,7 +28,7 @@ namespace NovemberQA.Utilities
         public static void Waits()
         {
             // driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(time);
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(60);
 
         }
 

@@ -20,23 +20,23 @@ namespace NovemberQA.Feature
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Profile")]
-    public partial class ProfileFeature
+    [NUnit.Framework.DescriptionAttribute("Language")]
+    public partial class LanguageFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "Profile.feature"
+#line 1 "Language.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Feature", "Profile", "As a seller\r\nI want the feature to add my Profile details\r\nSo that the people see" +
-                    "king for skills can look into my details", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Feature", "Language", "As a seller\r\nI want to add, edit and delete languages on my Profile\r\nSo that peop" +
+                    "le seeking for skills can look into my details", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -76,14 +76,14 @@ namespace NovemberQA.Feature
         
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Add Languages in the Profile")]
-        [NUnit.Framework.CategoryAttribute("languages")]
+        [NUnit.Framework.CategoryAttribute("addlanguages")]
         [NUnit.Framework.TestCaseAttribute("Arabic", "Basic", null)]
         [NUnit.Framework.TestCaseAttribute("English", "Fluent", null)]
         [NUnit.Framework.TestCaseAttribute("Hindi", "Conversational", null)]
         public void AddLanguagesInTheProfile(string languages, string level, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "languages"};
+                    "addlanguages"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -93,7 +93,7 @@ namespace NovemberQA.Feature
             argumentsOfScenario.Add("Languages", languages);
             argumentsOfScenario.Add("Level", level);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Languages in the Profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 8
+#line 10
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -103,13 +103,10 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 9
-    testRunner.Given("I logged into portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 10
- testRunner.When(string.Format("I add \'{0}\' and \'{1}\' to the profile", languages, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
 #line 11
+    testRunner.When(string.Format("I add \'{0}\' and \'{1}\' to the profile", languages, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 12
  testRunner.Then(string.Format("The \'{0}\' and \'{1}\' should be added successfully", languages, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -117,25 +114,15 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add Skills in the Profile")]
-        [NUnit.Framework.CategoryAttribute("skills")]
-        [NUnit.Framework.TestCaseAttribute("Cooking", "Expert", null)]
-        [NUnit.Framework.TestCaseAttribute("Teaching", "Beginner", null)]
-        [NUnit.Framework.TestCaseAttribute("PetCare", "Intermediate", null)]
-        public void AddSkillsInTheProfile(string skills, string level, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("Edit Languages in the Profile")]
+        [NUnit.Framework.CategoryAttribute("editlanguages")]
+        public void EditLanguagesInTheProfile()
         {
-            string[] @__tags = new string[] {
-                    "skills"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
+            string[] tagsOfScenario = new string[] {
+                    "editlanguages"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("Skills", skills);
-            argumentsOfScenario.Add("Level", level);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Skills in the Profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 21
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Languages in the Profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 22
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -145,38 +132,26 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 22
- testRunner.Given("I logged in portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
 #line 23
- testRunner.When(string.Format("I add \'{0}\' and \'{1}\' to profile", skills, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+   testRunner.When("I edit Languages and Level to the profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 24
- testRunner.Then(string.Format("The \'{0}\' and \'{1}\' should be added to the profile successfully", skills, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+   testRunner.Then("The Languages and Level should be edited successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add Certifications in the Profile")]
-        [NUnit.Framework.CategoryAttribute("certifications")]
-        [NUnit.Framework.TestCaseAttribute("Test Analyst", "Industry Connect", "2022", null)]
-        public void AddCertificationsInTheProfile(string certification, string from, string year, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("Delete Languages in the Profile")]
+        [NUnit.Framework.CategoryAttribute("deletelanguages")]
+        public void DeleteLanguagesInTheProfile()
         {
-            string[] @__tags = new string[] {
-                    "certifications"};
-            if ((exampleTags != null))
-            {
-                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
-            }
-            string[] tagsOfScenario = @__tags;
+            string[] tagsOfScenario = new string[] {
+                    "deletelanguages"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("Certification", certification);
-            argumentsOfScenario.Add("From", from);
-            argumentsOfScenario.Add("Year", year);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Certifications in the Profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 35
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete Languages in the Profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 27
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -186,14 +161,11 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 36
-    testRunner.Given("I logged to portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 28
+     testRunner.When("I delete Languages and Level from the profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 37
- testRunner.When(string.Format("I add \'{0}\', \'{1}\' and \'{2}\' to profile", certification, from, year), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 38
- testRunner.Then(string.Format("The \'{0}\', \'{1}\' and \'{2}\' should be added to the profile successfully", certification, from, year), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 29
+     testRunner.Then("Languages and Level should be deleted successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

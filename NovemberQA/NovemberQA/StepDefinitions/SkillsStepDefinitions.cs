@@ -39,7 +39,30 @@ namespace NovemberQA.StepDefinitions
             skillsPageObj.NewSkills(driver, skills, level);
         }
 
-       
+        [When(@"I edit Skills and Level to profile")]
+        public void WhenIEditSkillsAndLevelToProfile()
+        {
+            skillsPageObj.EditSkills(driver);
+        }
+
+        [Then(@"The Skills and Level should be edited to the profile successfully")]
+        public void ThenTheSkillsAndLevelShouldBeEditedToTheProfileSuccessfully()
+        {
+            skillsPageObj.EditedSkills(driver);
+        }
+
+        [When(@"I delete Skills and Level from profile")]
+        public void WhenIDeleteSkillsAndLevelFromProfile()
+        {
+           skillsPageObj.DeleteSkills(driver);
+        }
+
+        [Then(@"The Skills and Level should be deleted from the profile successfully")]
+        public void ThenTheSkillsAndLevelShouldBeDeletedFromTheProfileSuccessfully()
+        {
+            skillsPageObj.DeletedSkills(driver);
+        }
+
     }
 }
 

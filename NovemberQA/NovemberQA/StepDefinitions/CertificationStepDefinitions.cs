@@ -35,6 +35,31 @@ namespace NovemberQA.StepDefinitions
         {
             certificationPageObj.NewCertification(driver, certificate, certified, year);
         }
+
+        [When(@"I edit Certification, From and Year to profile")]
+        public void WhenIEditCertificationFromAndYearToProfile()
+        {
+            certificationPageObj.EditCertification(driver);
+        }
+
+        [Then(@"The Certification, From and Year should be edited to the profile successfully")]
+        public void ThenTheCertificationFromAndYearShouldBeEditedToTheProfileSuccessfully()
+        {
+            certificationPageObj.EditedCertification(driver);
+        }
+
+        [When(@"I delete Certification from the profile")]
+        public void WhenIDeleteCertificationFromTheProfile()
+        {
+            certificationPageObj.DeleteCertification(driver);
+        }
+
+        [Then(@"The Certification should be deleted from the profile successfully")]
+        public void ThenTheCertificationShouldBeDeletedFromTheProfileSuccessfully()
+        {
+            certificationPageObj.DeletedCertification(driver);
+        }
+
     }
 }
 

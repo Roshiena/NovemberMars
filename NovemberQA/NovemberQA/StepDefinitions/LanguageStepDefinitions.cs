@@ -13,15 +13,9 @@ namespace NovemberQA.StepDefinitions
     [Binding]
     public class LanguageStepDefinitions : CommonDriver
     {
-        LoginPage loginPageObj = new LoginPage();
+        
         LanguagePage languagePageObj = new LanguagePage();
 
-        [Given(@"I logged into portal successfully")]
-        public void GivenILoggedIntoPortalSuccessfully()
-        {
-            
-            loginPageObj.LoginSteps(driver);
-        }
 
         [When(@"I add '([^']*)' and '([^']*)' to the profile")]
         public void WhenIAddAndToTheProfile(string languages, string level)
@@ -37,5 +31,30 @@ namespace NovemberQA.StepDefinitions
             languagePageObj.NewLang(driver, languages, level);
             
         }
+
+        [When(@"I edit Languages and Level to the profile")]
+        public void WhenIEditLanguagesAndLevelToTheProfile()
+        {
+            languagePageObj.EditLanguages(driver);
+        }
+
+        [Then(@"The Languages and Level should be edited successfully")]
+        public void ThenTheLanguagesAndLevelShouldBeEditedSuccessfully()
+        {
+            languagePageObj.EditedLang(driver);
+        }
+
+        [When(@"I delete Languages and Level from the profile")]
+        public void WhenIDeleteLanguagesAndLevelFromTheProfile()
+        {
+            languagePageObj.DeleteLanguages(driver);
+        }
+
+        [Then(@"Languages and Level should be deleted successfully")]
+        public void ThenLanguagesAndLevelShouldBeDeletedSuccessfully()
+        {
+            languagePageObj.DeletedLang(driver);
+        }
+
     }
 }

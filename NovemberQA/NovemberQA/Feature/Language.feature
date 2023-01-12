@@ -7,7 +7,7 @@ So that people seeking for skills can look into my details
 
 
 @addlanguages
-Scenario Outline: Add Languages in the Profile
+Scenario Outline: A1 Add Languages in the Profile
     When I add '<Languages>' and '<Level>' to the profile
 	Then The '<Languages>' and '<Level>' should be added successfully
 
@@ -19,12 +19,16 @@ Examples:
 | Hindi     | Conversational    |      
 
 @editlanguages
-Scenario: Edit Languages in the Profile
-   When I edit Languages and Level to the profile
-   Then The Languages and Level should be edited successfully
+Scenario Outline: A2 Edit Languages in the Profile
+   When I edit '<Languages>' and '<Level>' to the profile
+   Then The '<Languages>' and '<Level>' should be edited successfully
+
+Examples: 
+| Languages | Level          |
+| French    | Conversational |
 
 @deletelanguages
-Scenario: Delete Languages in the Profile
+Scenario: A3 Delete Languages in the Profile
      When I delete Languages and Level from the profile
      Then Languages and Level should be deleted successfully
 

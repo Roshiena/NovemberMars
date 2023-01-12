@@ -46,7 +46,7 @@ namespace NovemberQA.Pages
         {
             
             profileButton.Click();
-            WaitHelpers.WaitToBeVisible(driver, "XPath", "//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]", 7);
+            WaitHelpers.WaitToBeVisible(driver, "XPath", "//td[normalize-space()='Arabic']", 10);
             return newLang.Text;
 
             

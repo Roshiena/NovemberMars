@@ -75,15 +75,15 @@ namespace NovemberQA.Feature
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add Skills in the Profile")]
-        [NUnit.Framework.CategoryAttribute("skills")]
+        [NUnit.Framework.DescriptionAttribute("B1 Add Skills in the Profile")]
+        [NUnit.Framework.CategoryAttribute("addskills")]
         [NUnit.Framework.TestCaseAttribute("Cooking", "Expert", null)]
         [NUnit.Framework.TestCaseAttribute("Teaching", "Beginner", null)]
         [NUnit.Framework.TestCaseAttribute("PetCare", "Intermediate", null)]
-        public void AddSkillsInTheProfile(string skills, string level, string[] exampleTags)
+        public void B1AddSkillsInTheProfile(string skills, string level, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "skills"};
+                    "addskills"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
@@ -92,7 +92,7 @@ namespace NovemberQA.Feature
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("Skills", skills);
             argumentsOfScenario.Add("Level", level);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Skills in the Profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("B1 Add Skills in the Profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -114,13 +114,23 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit Skills in the Profile")]
-        public void EditSkillsInTheProfile()
+        [NUnit.Framework.DescriptionAttribute("B2 Edit Skills in the Profile")]
+        [NUnit.Framework.CategoryAttribute("editskills")]
+        [NUnit.Framework.TestCaseAttribute("Writing", "Beginner", null)]
+        public void B2EditSkillsInTheProfile(string skills, string level, string[] exampleTags)
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] @__tags = new string[] {
+                    "editskills"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Skills in the Profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 18
+            argumentsOfScenario.Add("Skills", skills);
+            argumentsOfScenario.Add("Level", level);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("B2 Edit Skills in the Profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 19
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -130,24 +140,26 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 19
-    testRunner.When("I edit Skills and Level to profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
 #line 20
- testRunner.Then("The Skills and Level should be edited to the profile successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+    testRunner.When(string.Format("I edit \'{0}\' and \'{1}\' to profile", skills, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 21
+    testRunner.Then(string.Format("The \'{0}\' and \'{1}\' should be edited to the profile successfully", skills, level), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Delelte Skills in the Profile")]
-        public void DelelteSkillsInTheProfile()
+        [NUnit.Framework.DescriptionAttribute("B3 Delelte Skills in the Profile")]
+        [NUnit.Framework.CategoryAttribute("deleteskills")]
+        public void B3DelelteSkillsInTheProfile()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "deleteskills"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delelte Skills in the Profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 22
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("B3 Delelte Skills in the Profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 28
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -157,10 +169,10 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 23
+#line 29
     testRunner.When("I delete Skills and Level from profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 24
+#line 30
  testRunner.Then("The Skills and Level should be deleted from the profile successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

@@ -12,7 +12,7 @@ namespace NovemberQA.Hook
     public sealed class Driver1 : CommonDriver
     {
 
-
+        
         [BeforeScenario]
 
         public void Setup()
@@ -24,7 +24,7 @@ namespace NovemberQA.Hook
 
 
 
-
+        
         [AfterScenario]
         public void TearDown()
         {

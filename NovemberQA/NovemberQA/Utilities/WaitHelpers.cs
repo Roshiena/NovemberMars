@@ -18,7 +18,7 @@ namespace NovemberQA.Utilities
 
                 if (locator == "XPath")
                 {
-                    wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(locatorValue)));
+                   wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.XPath(locatorValue)));
                 }
                 if (locator == "Id")
                 {

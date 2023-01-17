@@ -75,11 +75,11 @@ namespace NovemberQA.Feature
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Add Certifications in the Profile")]
+        [NUnit.Framework.DescriptionAttribute("C1 Add Certifications in the Profile")]
         [NUnit.Framework.CategoryAttribute("certifications")]
         [NUnit.Framework.TestCaseAttribute("Test Analyst", "Industry Connect", "2022", null)]
-        [NUnit.Framework.TestCaseAttribute("Computer Applications", "College", "2015", null)]
-        public void AddCertificationsInTheProfile(string certification, string from, string year, string[] exampleTags)
+        [NUnit.Framework.TestCaseAttribute("Computer Applications", "Adobe", "2015", null)]
+        public void C1AddCertificationsInTheProfile(string certification, string from, string year, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "certifications"};
@@ -92,7 +92,7 @@ namespace NovemberQA.Feature
             argumentsOfScenario.Add("Certification", certification);
             argumentsOfScenario.Add("From", from);
             argumentsOfScenario.Add("Year", year);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add Certifications in the Profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("C1 Add Certifications in the Profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 9
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -104,9 +104,12 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 10
- testRunner.When(string.Format("I add \'{0}\', \'{1}\' and \'{2}\' to profile", certification, from, year), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+    testRunner.Given("I have navigated to Certification Page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 11
+ testRunner.When(string.Format("I add \'{0}\', \'{1}\' and \'{2}\' to profile", certification, from, year), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 12
  testRunner.Then(string.Format("The \'{0}\', \'{1}\' and \'{2}\' should be added to the profile successfully", certification, from, year), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
@@ -114,13 +117,17 @@ this.ScenarioInitialize(scenarioInfo);
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Edit Certifications in the Profile")]
-        public void EditCertificationsInTheProfile()
+        [NUnit.Framework.DescriptionAttribute("C2 Edit Certifications in the Profile")]
+        [NUnit.Framework.TestCaseAttribute("Certificate in Computer Applications", "Anna University", "2020", null)]
+        public void C2EditCertificationsInTheProfile(string certification, string from, string year, string[] exampleTags)
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Edit Certifications in the Profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 18
+            argumentsOfScenario.Add("Certification", certification);
+            argumentsOfScenario.Add("From", from);
+            argumentsOfScenario.Add("Year", year);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("C2 Edit Certifications in the Profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 19
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -130,24 +137,24 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 19
- testRunner.When("I edit Certification, From and Year to profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
 #line 20
- testRunner.Then("The Certification, From and Year should be edited to the profile successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When(string.Format("I edit \'{0}\', \'{1}\' and \'{2}\' to profile", certification, from, year), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 21
+ testRunner.Then(string.Format("The \'{0}\', \'{1}\' and \'{2}\' should be edited to the profile successfully", certification, from, year), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Delete Certifications in the Profile")]
-        public void DeleteCertificationsInTheProfile()
+        [NUnit.Framework.DescriptionAttribute("C3 Delete Certifications in the Profile")]
+        public void C3DeleteCertificationsInTheProfile()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Delete Certifications in the Profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 22
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("C3 Delete Certifications in the Profile", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 27
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -157,10 +164,10 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 23
+#line 28
  testRunner.When("I delete Certification from the profile", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 24
+#line 29
  testRunner.Then("The Certification should be deleted from the profile successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
